@@ -3,9 +3,12 @@
 import sys
 
 def main():
-	ans = 0.0
+	ans = 0
 	for line in sys.stdin:
-		ans += float(line)
+		try:
+			ans += int(line)
+		except:
+			ans += float(line)
 	print(ans)
 
 
