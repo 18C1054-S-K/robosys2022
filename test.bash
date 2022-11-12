@@ -10,7 +10,15 @@ ng () {
 res=0
 
 out=$(seq 5 | ./plus.py)
-
 [ "${out}" = 14 ] || ng ${LINENO}
+
+out=$(echo あ | ./plus.py)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo | ./plus.py)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
 [ "$res" = 0 ] && echo OK
 exit $res
