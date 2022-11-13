@@ -5,17 +5,24 @@
 
 import random
 import sys
-from aas import aa, get_aas
+from aas import aa, get_aas, show_aas_in_row
 
 def main():
-#	dice_aas = get_aas('aas/dice.txt', 'aas/dice.yml')
 	'''
 	check 1st arg
 	'''
 	try:
 		n = int(sys.argv[1])
 	except ValueError:
-		print("1st argument must be integer")
+		if sys.argv[1] == "-h":
+			print("throw dices & calcurate sum of their roll")
+			print("  1st argument: how many dices")
+			print("  2nd argument: seed of random")
+			print("")
+			print("NOTE  * 1st arg must be in [1,10]")
+			print("      * if 2nd arg is None or invalid, seed is current time")
+		else:
+			print("1st argument must be integer")
 		return 1
 	except IndexError:
 		print("need 1 or 2 arguments")
@@ -36,14 +43,22 @@ def main():
 		random.seed()
 
 	'''
+	read dice aa
+	'''
+	dice_aas = get_aas('aas/dice.txt', 'aas/dice.yml')
+
+	'''
 	main part
 	'''
-	for i in range(n):
-		m = random.randint(1,6)
-		if i > 0:
-			print(" ", end="")
-		print(m, end="")
+	ms = [random.randint(1,6) for i in range(n)]
+	for i in range(n // 5 - 1):
+		show_aas_in_row([dice_aas[ms[j] - 1] for j in range(i*5, (i+1)*5)], str_between_aas="   ")
+		print("")
+	show_aas_in_row([dice_aas[ms[i] - 1] for i in range(5*(n//5 - 1), n)], str_between_aas="   ")
 	print("")
+#	print(ms)
+	s = sum(ms)
+	print("sum:", s)
 
 	return 0
 
