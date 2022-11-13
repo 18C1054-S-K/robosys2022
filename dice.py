@@ -8,9 +8,7 @@ import sys
 from aas import aa, get_aas, show_aas_in_row
 
 def main():
-	'''
-	check 1st arg
-	'''
+	'''  check 1st arg  '''
 	try:
 		n = int(sys.argv[1])
 	except ValueError:
@@ -34,22 +32,16 @@ def main():
 		print("1st argument must be in [1,10]")
 		return 1
 
-	'''
-	init random with 2nd arg
-	'''
+	'''  init random with 2nd arg  '''
 	try:
 		random.seed(a=int(sys.argv[2]))
 	except:
 		random.seed()
 
-	'''
-	read dice aa
-	'''
+	'''  read dice aa  '''
 	dice_aas = get_aas('aas/dice.txt', 'aas/dice.yml')
 
-	'''
-	main part
-	'''
+	'''  main part  '''
 	ms = [random.randint(1,6) for i in range(n)]
 	for i in range(n // 5 - 1):
 		show_aas_in_row([dice_aas[ms[j] - 1] for j in range(i*5, (i+1)*5)], str_between_aas="   ")
@@ -57,8 +49,7 @@ def main():
 	show_aas_in_row([dice_aas[ms[i] - 1] for i in range(5*(n//5 - 1), n)], str_between_aas="   ")
 	print("")
 #	print(ms)
-	s = sum(ms)
-	print("sum:", s)
+	print("sum:", sum(ms))
 
 	return 0
 

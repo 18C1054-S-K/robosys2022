@@ -1,0 +1,76 @@
+( No. 1 )
+ _____
+|  _  l
+| |_l |
+|  _ <
+| |_l |
+|_____l
+width : 7
+height: 6
+else:
+  name: B
+
+( No. 2 )
+ _____
+|  _  l
+| l_l |
+|  _ <
+| | i l
+|_| |_|
+width : 7
+height: 6
+else:
+  name: R
+
+( No. 3 )
+ _____
+l  _  l
+| | | |
+| | | |
+| |_| |
+l_____l
+width : 7
+height: 6
+else:
+  name: O
+
+( No. 4 )
+ _____
+/  ___|
+| l___
+ >__  >
+ ___l |
+|_____/
+width : 7
+height: 6
+else:
+  name: S
+
+( No. 5 )
+ _   _
+| | | |
+|  V  |
+ >   /
+  | |
+  |_|
+width : 7
+height: 6
+else:
+  name: Y
+
+( No. 6 )
+2022
+width : 4
+height: 1
+else:
+  descrition:
+  - this year
+  - _2022
+  name: year
+
+ _____     _____     _____     _____     _____     _   _     _____    2022   
+|  _  l   l  _  l   |  _  l   l  _  l   /  ___|   | | | |   /  ___|          
+| l_l |   | | | |   | |_l |   | | | |   | l___    |  V  |   | l___           
+|  _ <    | | | |   |  _ <    | | | |    >__  >    >   /     >__  >          
+| | i l   | |_| |   | |_l |   | |_| |    ___l |     | |      ___l |          
+|_| |_|   l_____l   |_____l   l_____l   |_____/     |_|     |_____/          

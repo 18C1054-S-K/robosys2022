@@ -1,0 +1,22 @@
+- up: 1
+  down: 6
+  name: B
+- up: 7
+  down: 12
+  name: R
+- up: 13
+  down: 18
+  name: O
+- up: 19
+  down: 24
+  name: S
+- up: 25
+  down: 30
+  name: Y
+- up: 31
+  down: 31
+  name: year
+  descrition:
+    - this year
+    - _2022
+    

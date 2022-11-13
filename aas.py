@@ -6,9 +6,9 @@
 import yaml
 
 class aa:
-	def __init__(self, strs, attrs=None):
+	def __init__(self, strs, elses=None):
 		self.strs = strs
-		self.attrs = []
+		self.elses = elses
 		self.height = len(self.strs)
 		self.width = 0
 		for s in self.strs:
@@ -43,7 +43,7 @@ def get_aas(aa_txt_path, cutter_yml_path):
 			if 'up' in c and 'down' in c and int(c['down']) - int(c['up']) >= 0:
 				c_ = c.copy()
 				del c_['up'], c_['down']
-				aas.append(aa(strs[int(c['up'])-1 : int(c['down'])], attrs=c_))
+				aas.append(aa(strs[int(c['up'])-1 : int(c['down'])], elses=c_))
 		return aas
 #	except: return None
 
