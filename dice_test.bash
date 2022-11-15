@@ -26,7 +26,7 @@ arg2=5
 out=$(./dice.py ${arg1} ${arg2})
 #[ "${out}" = "5 3 6 3 6 6 6 5 1 4" ] || ng ${LINENO}
 
-diff <(cat dice_expected_output.txt) <(echo "${out}")
+diff <(cat txts4test/dice_expected_output.txt) <(echo "${out}")
 [ $? = 0 ] || ng ${LINENO}
 
 << comment

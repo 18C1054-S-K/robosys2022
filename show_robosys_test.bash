@@ -10,7 +10,7 @@ ng () {
 
 ret=0
 
-out=$(diff <(cat robosys2022.txt) <(./show_robosys.py))
+out=$(diff <(cat txts4test/robosys2022.txt) <(./show_robosys.py))
 [ $? -eq 0 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
