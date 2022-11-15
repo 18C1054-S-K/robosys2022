@@ -54,9 +54,9 @@ def show_aas_in_row(aas, str_between_aas=None):
 		return 0
 
 	if str_between_aas == None or not type(str_between_aas) == str:
-		space = ""
+		delimiter = ""
 	else:
-		space = str_between_aas
+		delimiter = str_between_aas
 
 	strs = []
 	w_sum = 0
@@ -67,16 +67,25 @@ def show_aas_in_row(aas, str_between_aas=None):
 			for j,s in enumerate(aas[i].strs):	
 				strs[j] += aas[i].strs[j]
 			w_sum += aas[i].width
-			if i < len(aas):
+			if i < len(aas) - 1:
 				for j in range(len(strs)):
 					strs[j] += " " * (w_sum - len(strs[j]))
-					strs[j] += space
-				w_sum += len(space)
+					strs[j] += delimiter
+				w_sum += len(delimiter)
 		else:
-			if i == len(aas)-1:
+			if i == len(aas)-1 and not len(delimiter) == 0:
 				for j in range(strs):
-					strs[j] = strs[j][: -len(space)]
+					strs[j] = strs[j][: -len(delimiter)]
 	for s in strs:
-		print(s)
+		space_len = 0
+		for i in reversed(range(len(s))):
+			if s[i] == " ":
+				space_len += 1
+			else:
+				break
+		if space_len == 0:
+			print(s)
+		else:
+			print(s[: - space_len])
 
 	return 0

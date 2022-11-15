@@ -14,5 +14,4 @@ out=$(diff <(cat robosys2022.txt) <(./show_robosys.py))
 [ $? -eq 0 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-
 exit ${ret}
