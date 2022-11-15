@@ -1,7 +1,7 @@
 # robosys2022
 
 ## plus.py
-![test](https://github.com/18C1054-S-K/robosys2022/actions/workflows/test.yml/badge.svg)  
+![plus_test](https://github.com/18C1054-S-K/robosys2022/actions/workflows/plus_test.yml/badge.svg)  
 引数として与えた数の和を標準出力で表示します
 #### コマンド
 ```
@@ -26,6 +26,7 @@ python3 plus.py <引数1> <引数2> ... <引数n>
 単独では機能しません
 
 ## dice.py
+![dice_test](https://github.com/18C1054-S-K/robosys2022/actions/workflows/dice_test.yml/badge.svg)  
 サイコロを振り、出た目と和を標準出力で表示します  
 1つ目の引数は振るサイコロの個数です  
 10以下の自然数を与えてください  
@@ -45,7 +46,13 @@ python3 dice.py <サイコロの数> <シード値(なくても可)>
 ```
 結果
 ```
++-------+   +-------+   +-------+   
+| O   O |   |     O |   | O   O |   
+|   O   |   |   O   |   | O   O |   
+| O   O |   | O     |   | O   O |   
++-------+   +-------+   +-------+   
 
+sum: 14
 ```
 
 ## 参考
