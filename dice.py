@@ -43,10 +43,11 @@ def main():
 
 	'''  main part  '''
 	ms = [random.randint(1,6) for i in range(n)]
-	for i in range(n // 5 - 1):
+	for i in range(n // 5):
 		show_aas_in_row([dice_aas[ms[j] - 1] for j in range(i*5, (i+1)*5)], str_between_aas="   ")
-		print("")
-	show_aas_in_row([dice_aas[ms[i] - 1] for i in range(5*(n//5 - 1), n)], str_between_aas="   ")
+		if not i == n // 5 - 1:
+			print("")
+	show_aas_in_row([dice_aas[ms[i] - 1] for i in range(5*(n//5), n)], str_between_aas="   ")
 	print("")
 #	print(ms)
 	print("sum:", sum(ms))
