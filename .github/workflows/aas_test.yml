@@ -11,4 +11,4 @@ jobs:
     - name: aas test
       run: bash -xv ./aas_test.bash
     - name: show robosys
-      run: bash -xv ./show_robosys.bash
+      run: bash -xv ./show_robosys_test.bash
