@@ -1,5 +1,13 @@
 # robosys2022
 
+## 概要
+2つのpythonコード(足し算をするpush.pyとサイコロを振るdice.py)を含みます。  
+ロボットシステム学の課題で作成したリポジトリです。
+
+## 動作環境
+Ubuntu20.04  
+python3.7~3.10
+
 ## plus.py
 ![plus_test](https://github.com/18C1054-S-K/robosys2022/actions/workflows/plus_test.yml/badge.svg)  
 標準入力で与えた数の和を標準出力で表示します。
@@ -78,10 +86,11 @@ dice.pyはサイコロを表示するためにaas.pyから関数等をimportし�
   * [Qiita diffでコマンドの出力の結果を直接比較する。](https://qiita.com/wingedtw/items/2f05c5d0c37d71f209f4)
 
 
-## 著作権
+## ライセンスについて
 MITライセンス  
-(同ディレクトリ内にある)LICENSEをお読みください。  
-このパッケージのコードは、下記のスライド(CC-BY-SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです  
+(同ディレクトリ内にある)LICENSEをお読みください。
 
+## 著作権について
+このパッケージのコードは、下記のスライド(CC-BY-SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。  
 [ryuichiueda/my_slides_robosys_2022](https://github.com/ryuichiueda/my_slides_robosys_2022)
 
